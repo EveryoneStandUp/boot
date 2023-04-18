@@ -33,3 +33,28 @@ SET SupplierName = '채치수',
 WHERE Country = 'USA';
 
 SELECT * FROM Suppliers WHERE Country = 'France';
+
+SELECT * FROM Suppliers;
+UPDATE Suppliers
+SET ContactName = '북산',
+	City = 'Seoul';
+    
+SELECT * FROM Suppliers;
+
+UPDATE Suppliers
+SET
+	PostalCode = CONCAT('J', PostalCode)
+WHERE Country = 'Japan'; 
+
+SELECT * FROM Suppliers WHERE Country = 'Japan';
+
+SELECT * FROM Products;
+INSERT INTO Products
+VALUES (1, 'cake', null, null, null, 300);
+INSERT INTO Products
+VALUES (2, 'pizza', null, null, null, 100);
+
+UPDATE Products
+SET Price = Price * 1300;
+
+
