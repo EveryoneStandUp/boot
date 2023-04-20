@@ -17,7 +17,7 @@ VALUES ('정대만', 'daeman');
 
 SELECT * FROM Customers ORDER BY 1 DESC;
 
-SELECT * FROM Suppliers ORDER BY 1 DESC;
+SELECT * FROM Suppliers ORDER BY 1 DESC;	
 -- 새 공급자 데이터 추가 (SupplierName, City)
 -- 자동증가 컬럼은 직접 값을 넣지 않고
 DESC Suppliers;
@@ -26,7 +26,7 @@ VALUES ('sebaek', 'Incheon');
 
 SELECT * FROM Employees ORDER BY 1 DESC;
 
-
+	
 
 
 
