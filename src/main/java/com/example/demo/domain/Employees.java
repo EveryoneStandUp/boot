@@ -1,6 +1,6 @@
 package com.example.demo.domain;
 
-import java.sql.*;
+import java.time.*;
 
 import lombok.*;
 
@@ -9,7 +9,7 @@ public class Employees {
 	private int employeeId;
 	private String firstName;
 	private String lastName;
-	private Date birth;
+	private LocalDate birth;
 	private String photo;
 	private String notes;
 }
