@@ -53,7 +53,7 @@ FROM Orders o JOIN OrderDetails od ON o.OrderID = od.OrderID
 			  JOIN Employees e ON o.EmployeeID = e.EmployeeID
 WHERE o.OrderDate BETWEEN '1997-01-01' AND '1997-01-31'
 GROUP BY e.EmployeeID
-ORder BY 처리금액 DESC;
+ORDER BY 처리금액 DESC;
 
 -- 상품별 판매금액 (가장 많이 팔린 상품 내림차순)
 SELECT p.ProductID, p.ProductName, SUM(od.Quantity * p.Price) 판매금액
