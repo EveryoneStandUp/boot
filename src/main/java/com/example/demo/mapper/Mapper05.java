@@ -9,7 +9,7 @@ public interface Mapper05 {
 
 	@Update("""
 			UPDATE MyTable39
-			SET
+			SET 
 				Col2 = '수정된 값',
 				Col3 = 99999
 			""")
@@ -17,24 +17,24 @@ public interface Mapper05 {
 	
 	@Update("""
 			UPDATE MyTable39
-			SET
+			SET 
 				Col2 = #{val1},
 				Col3 = #{val2}
-			WHERE
+			WHERE 
 				Col1 = #{key}
 			""")
 	int sql2(Integer key, String val1, Integer val2);
-	
+
 	@Update("""
 			UPDATE Customers
-			SET
+			SET 
 				CustomerName = #{name},
 				Country = #{country}
-			WHERE	
-				CustomerID = #{id}
+			WHERE
+				CustomerId = #{id}
 			""")
-	int sql3(Integer id, String name, String country);
-
+	int sql3(int id, String name, String country);
+	
 	@Update("""
 			UPDATE Customers
 			SET
@@ -44,14 +44,14 @@ public interface Mapper05 {
 				City = #{city},
 				PostalCode = #{postalCode},
 				Country = #{country}
-			WHERE
-				CustomerID = #{id}
+			WHERE 
+				CustomerId = #{id}
 			""")
 	int sql4(Customer customer);
 
 	@Select("""
 			SELECT 
-				CustomerID id,
+				CustomerId id,
 				CustomerName name,
 				ContactName,
 				Address,
@@ -59,43 +59,36 @@ public interface Mapper05 {
 				Country,
 				PostalCode
 			FROM Customers
-			WHERE CustomerID = #{id}	
+			WHERE CustomerId = #{id}
 			""")
 	Customer sql5(Integer id);
 	
-	@Update("""
-			UPDATE Employees
-			SET
-				FirstName = #{firstName},
-				LastName = #{lastName},
-				BirthDate = #{birth},
-				Photo = #{photo},
-				Notes = #{notes}
-			WHERE
-				EmployeeID = #{employeeId}
-			""")
-	int sql6(Employees employee);
-	
 	@Select("""
 			SELECT 
-				EmployeeID,
-				FirstName,
+				EmployeeID AS id,
 				LastName,
-				BirthDate Birth,
+				FirstName,
+				Notes,
 				Photo,
-				Notes
+				BirthDate birth
 			FROM Employees
-			WHERE EmployeeID = #{id}	
+			WHERE EmployeeId = #{employeeId}
 			""")
-	Employees sql7(Integer id);
+	Employees sql6(Integer employeeId);
 	
+	@Update("""
+			UPDATE Employees
+			SET 
+				LastName = #{lastName},
+				FirstName = #{firstName},
+				Photo = #{photo},
+				Notes = #{notes},
+				BirthDate = #{birth}
+			WHERE
+				EmployeeId = #{employeeId}
+			""")
+	int sql7(Employees employee);
 }
-
-
-
-
-
-
 
 
 
