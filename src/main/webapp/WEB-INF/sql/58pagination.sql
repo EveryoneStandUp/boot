@@ -18,3 +18,19 @@ LIMIT 20, 20; -- 2페이지
 SELECT * FROM Customers
 ORDER BY CustomerID DESC
 LIMIT 40, 20; -- 3페이지
+
+SELECT CustomerId id,
+			 	CustomerName name,
+			 	ContactName,
+			 	Address FROM Customers
+ORDER BY CustomerID DESC
+LIMIT 0, 20;
+
+
+
+
+
+
+
+
+
