@@ -1,3 +1,5 @@
 USE w3schools;
 SELECT * FROM Customers
-WHERE CustomerName LIKE '%ton%';
+WHERE CustomerName LIKE '%ell%';
+
+SELECT * FROM Products;
