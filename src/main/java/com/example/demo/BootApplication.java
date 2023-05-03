@@ -1,11 +1,13 @@
 package com.example.demo;
 
-import org.springframework.boot.*;
-import org.springframework.boot.autoconfigure.*;
-import org.springframework.context.*;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
-import com.example.demo.component.*;
-import com.example.demo.domain.*;
+import com.example.demo.component.ComponentA;
+import com.example.demo.component.ComponentC;
+import com.example.demo.component.ComponentE;
+import com.example.demo.domain.Employees;
 
 @SpringBootApplication
 public class BootApplication {

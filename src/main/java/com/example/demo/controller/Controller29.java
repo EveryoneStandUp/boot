@@ -31,76 +31,77 @@ public class Controller29 {
 	}
 
 	@PostMapping("link4")
-	public void method4(@RequestParam("files") MultipartFile[] file) {
+	public void metho4(@RequestParam("files") MultipartFile[] file) {
 		for (MultipartFile f : file) {
 			System.out.println(f.getOriginalFilename());
 			System.out.println(f.getSize());
 		}
 	}
-	
+
 	@GetMapping("link5")
 	public void method5() {
-		// 파일 Input이 있는 form을 포함한 뷰(link3.jsp)로 포워드
+
 	}
 
 	@PostMapping("link6")
-	public void method6(@RequestParam("files") MultipartFile[] file) {
-		for (MultipartFile f : file) {
-			System.out.println(f.getOriginalFilename());
-			System.out.println(f.getSize());
+	public void method6(@RequestParam("files") MultipartFile[] files) {
+		for (MultipartFile file : files) {
+			System.out.println(file.getOriginalFilename());
+			System.out.println(file.getSize());
 		}
+
 	}
-	
+
 	@GetMapping("link7")
 	public void method7() {
-		
+
 	}
-	
+
 	@Data
 	static class Sub29Dto {
 		private String name;
 		private Integer age;
 	}
-	
+
 	@PostMapping("link8")
 	public void method8(
 			Sub29Dto dto,
 			String name,
-			Integer age, 
+			Integer age,
 			@RequestParam("files") MultipartFile[] files) {
 		System.out.println(dto);
-		
+
 		System.out.println(name);
 		System.out.println(age);
-		
+
 		for (MultipartFile file : files) {
 			System.out.println(file.getOriginalFilename());
 			System.out.println(file.getSize());
 		}
 	}
-	
+
 	@GetMapping("link9")
 	public void method9() {
-		
+
 	}
-	
+
 	@PostMapping("link10")
 	public void method10(@RequestParam("file1") MultipartFile file) {
-		
+
 		System.out.println(file.getOriginalFilename());
 		System.out.println(file.getSize());
-		
+
 		try (InputStream fis = file.getInputStream();
 				BufferedInputStream bis = new BufferedInputStream(fis);) {
 			
 			String targetFileName = "copy_" + file.getOriginalFilename();
-			
+
 			try (FileOutputStream fos = new FileOutputStream(targetFileName);
 					BufferedOutputStream bos = new BufferedOutputStream(fos)) {
 				
 				byte[] datas = new byte[1024];
 				int len = 0;
-				while ((bis.read(datas)) != -1) {
+				while ((len = bis.read(datas)) != -1) {
 					bos.write(datas, 0, len);
 				}
 				
@@ -120,20 +121,8 @@ public class Controller29 {
 		file.transferTo(target);
 		
 	}
-	
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
