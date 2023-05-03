@@ -1,11 +1,13 @@
 package com.example.demo.controller;
 
-import org.springframework.beans.factory.annotation.*;
-import org.springframework.stereotype.*;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.demo.domain.*;
-import com.example.demo.mapper.*;
+import com.example.demo.domain.Category;
+import com.example.demo.domain.Supplier;
+import com.example.demo.mapper.Mapper11;
 
 @Controller
 @RequestMapping("sub31")

@@ -1,12 +1,13 @@
 package com.example.demo.mapper;
 
-import java.util.Locale.Category;
-
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;
 
-import com.example.demo.domain.Supplier;
+import org.apache.ibatis.annotations.*;
+import org.springframework.web.bind.annotation.*;
+
+import com.example.demo.domain.*;
 
 @Mapper
 public interface Mapper11 {
@@ -22,7 +23,7 @@ public interface Mapper11 {
 			WHERE c.CategoryId = #{id}
 				
 			""")
-	//@ResultMap("categoryResult")
+	@ResultMap("categoryResult")
 	Category sql1(int id);
 
 	
@@ -37,7 +38,7 @@ public interface Mapper11 {
 				              ON c.CategoryId = p.CategoryId
 			WHERE c.CategoryId = #{id} 
 			""")
-	//@ResultMap("categoryResultMap")
+	@ResultMap("categoryResultMap")
 	Category sql2(int id);
 
 
@@ -57,7 +58,7 @@ public interface Mapper11 {
 			  ON s.SupplierId = p.SupplierId
 			WHERE s.SupplierId = #{id}
 			""")
-	//@ResultMap("supplierResultMap")
+	@ResultMap("supplierResultMap")
 	Supplier sql3(int id);
 }
 

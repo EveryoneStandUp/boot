@@ -1,6 +1,6 @@
 package com.example.demo.domain;
 
-import java.util.List;
+import java.util.*;
 
 import lombok.Data;
 

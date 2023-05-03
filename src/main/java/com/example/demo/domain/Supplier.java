@@ -1,9 +1,12 @@
 package com.example.demo.domain;
 
-import lombok.*;
+import java.util.*;
+
+import lombok.Data;
 
 @Data
 public class Supplier {
+	private int id;
 	private String name;
 	private String contactName;
 	private String address;
@@ -11,5 +14,6 @@ public class Supplier {
 	private String postalCode;
 	private String country;
 	private String phone;
-	private int id;
+
+	private List<Product> products;
 }
