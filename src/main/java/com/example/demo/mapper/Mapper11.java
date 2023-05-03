@@ -22,7 +22,7 @@ public interface Mapper11 {
 			WHERE c.CategoryId = #{id}
 				
 			""")
-	@ResultMap("categoryResult")
+	//@ResultMap("categoryResult")
 	Category sql1(int id);
 
 	
@@ -37,7 +37,7 @@ public interface Mapper11 {
 				              ON c.CategoryId = p.CategoryId
 			WHERE c.CategoryId = #{id} 
 			""")
-	@ResultMap("categoryResultMap")
+	//@ResultMap("categoryResultMap")
 	Category sql2(int id);
 
 
@@ -57,7 +57,7 @@ public interface Mapper11 {
 			  ON s.SupplierId = p.SupplierId
 			WHERE s.SupplierId = #{id}
 			""")
-	@ResultMap("supplierResultMap")
+	//@ResultMap("supplierResultMap")
 	Supplier sql3(int id);
 }
 

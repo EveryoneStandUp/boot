@@ -17,7 +17,7 @@
 		<id column="CategoryId" property="id"></id>
 		<result column="CategoryName" property="name"></result>
 		<result column="Description" property="description"></result>
-		<collection property="products" ofType="com.example.demo.domain.Product">
+		<collection property="products" javaType="com.example.demo.domain.Product">
 			<result column="ProductName" property="name"></result>
 			<result column="Price" property="price"></result>
 		</collection>
@@ -32,7 +32,7 @@
 		<result column="contactName" property="contactName"></result>
 		<result column="address" property="address"></result>
 		<result column="postalCode" property="postalCode"></result>
-		<collection ofType="com.example.demo.domain.Product" property="products">
+		<collection javaType="com.example.demo.domain.Product" property="products">
 			<result column="productName" property="name"></result>
 			<result column="price" property="price"></result>
 		</collection>
