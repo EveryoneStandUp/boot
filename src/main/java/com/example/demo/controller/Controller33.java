@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import org.springframework.security.access.prepost.*;
 import org.springframework.security.core.*;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
@@ -25,5 +26,11 @@ public class Controller33 {
 	
 		System.out.println(authentication);
 		System.out.println(authentication.getName());
+	}
+	
+	@GetMapping("customCheck")
+	@PreAuthorize("@securityUtil.checkBoardWriter(authentication, #id)")
+	public void customCheck(String id) {
+		System.out.println("customCheck 메소드 실행중.");
 	}
 }
