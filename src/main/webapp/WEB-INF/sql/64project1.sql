@@ -17,9 +17,16 @@ CREATE TABLE MemberAuthority (
     FOREIGN KEY (memberId) REFERENCES Member(id),
     PRIMARY KEY (memberId, authority)
 );
+SELECT * FROM MemberAuthority;
+
+INSERT INTO MemberAuthority
+VALUES ('admin0', 'admin');
 
 DESC MemberAuthority;
 
+SELECT *
+FROM Member m LEFT JOIN MemberAuthority ma ON m.id = ma.memberId
+WHERE m.id = 'user6';
 
 
 
