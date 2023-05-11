@@ -11,39 +11,42 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-	<h5>ajax 연습 1</h5>
+	<h5>json -> javaBean</h5>
+	<button id="btn1">json 전송</button>
+	<br />
+	<button id="btn2">json 전송2</button>
+	<br />
+	<button id="btn3">배열 전송</button>
+	<br />
+	<button id="btn4">배열값 전송</button>
+	<br />
+	<button id="btn5">객체값 전송</button>
+	<br />
+	<button id="btn6">객체값 전송2</button>
+	<br />
+	<button id="btn7">객체값 전송3</button>
+	<br />
 	
-	<div>
-		<button id="button1">ajax요청</button>
-	</div>
-	<div>
-		<button id="button2">get 요청 / link2로</button>
-	</div>
-	<div>
-		<button id="button3">get 요청 쿼리스트링과</button>
-	</div>
-	<div>
-		<button id="button4">get 요청 querystring</button>
-	</div>
-	<div>
-		<button id="button5">get 요청 여러 파라미터</button>
-	</div>
-	<div>
-		<button id="button6">get 요청 여러 파라미터2</button>
-	</div>
-	<div>
-		<button id="button7">get 요청 여러 파라미터 자바빈으로 받음</button>
-	</div>
-	<div>
-		<button id="button8">get 요청 여러 파라미터 자바빈으로 받음2</button>
-	</div>
+	<hr />
+	<input type="text" id="inputName" placeholder="이름" /> <br />
+	<input type="text" id="inputAge" placeholder="나이"/> <br />
+	<button id="btn8">전송</button>
+	
+	<hr />
+	<input type="text" id="inputName2" placeholder="이름" /> <br />
+	<input type="text" id="inputEmail2" placeholder="이메일" /> <br />
+	<input type="text" id="inputScore2" placeholder="점수" /> <br />
+	<input type="text" id="inputMarried2" placeholder="결혼유무" /> <br />
+	<button id="btn9">전송</button>
+		
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-	<script src="/js/sub34/ajax1.js"></script>
+	<script src="/js/sub36/ajax.js"></script>
 	
 </body>
 </html>
+
 
 
 
