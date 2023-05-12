@@ -2,29 +2,27 @@ $("#btn1").click(function() {
 	const obj = {
 		name: "정대만",
 		age: 40
-	};
-
+	}
 	$.ajax("/sub36/link1", {
 		method: "post",
 		contentType: "application/json",
 		data: JSON.stringify(obj)
-	});
-});
+	})
+})
 
 $("#btn2").click(function() {
-	const obj = {
-		name: "김덕배",
-		email: "sebaek@google.com",
-		score: 33.33,
+	const data = {
+		name: "강백호",
+		email: "kang@gmail.com",
+		score: 99.99,
 		married: true
-	};
-
+	}
 	$.ajax("/sub36/link2", {
 		method: "post",
 		contentType: "application/json",
-		data: JSON.stringify(obj)
-	});
-});
+		data: JSON.stringify(data)
+	})
+})
 
 $("#btn3").click(function() {
 	const data = {
@@ -39,60 +37,61 @@ $("#btn3").click(function() {
 		method: "post",
 		contentType: "application/json",
 		data: JSON.stringify(data)
-	});
-});
+	})
+})
 
 $("#btn4").click(function() {
-	const data = {
-		phone: ["iphone", "galaxy","motorola"]
-	};
+	const obj = {
+		phone: ["samsung", "apple", "motorola"]
+	}
 	$.ajax("/sub36/link4", {
 		method: "post",
 		contentType: "application/json",
-		data: JSON.stringify(data)
-	});
-});
+		data: JSON.stringify(obj)
+	})
 
-$("#btn5").click(function () {
+})
+
+
+$("#btn5").click(function() {
 	const data = {
 		title: "java",
 		publisher: "한빛",
 		writer: {
-			name : "정대만",
-			age : 44,
+			name: "정대만",
+			age: 44
 		}
 	}
-	
+
 	$.ajax("/sub36/link5", {
 		method: "post",
 		contentType: "application/json",
 		data: JSON.stringify(data)
-	})
-});
+	});
+})
 
-$("#btn6").click(function () {
+$("#btn6").click(function() {
 	const data = {
-		city: "siheung",
-		price: "30000",
+		city: "jeju",
+		price: 1000,
 		etc: {
-			name: "정대만",
-			email: "asd@naver.com",
-			score: 123.33,
-			married: true 
+			name: "lee",
+			email: "lee@gmail.com",
+			score: 3.33,
+			married: true
 		}
-	};
-	
+	}
 	$.ajax("/sub36/link6", {
 		method: "post",
 		contentType: "application/json",
 		data: JSON.stringify(data)
-	});
-});
+	})
+})
 
 $("#btn7").click(function() {
 	const data = [
 		{
-			name: "이강인", 
+			name: "이강인",
 			age: 22
 		},
 		{
@@ -103,37 +102,37 @@ $("#btn7").click(function() {
 			name: "손흥민",
 			age: 44
 		}
-	];
-	
+	]
+
 	$.ajax("/sub36/link7", {
 		method: "post",
 		contentType: "application/json",
 		data: JSON.stringify(data)
-	});
-});
+	})
+})
 
-///////////////////////
-$("#btn8").click(function () {
+////////////////////////////////
+$("#btn8").click(function() {
 	const name = $("#inputName").val();
 	const age = $("#inputAge").val();
-	
+
 	const data = {
 		name: name,
 		age: age
 	};
 
 	$.ajax("/sub36/link1", {
-			method: "post",
-			contentType: "application/json",
-			data: JSON.stringify(data)
-	}); 
-});	
+		method: "post",
+		contentType: "application/json",
+		data: JSON.stringify(data)
+	})
+});
 
-$("#btn9").click(function () {
-	const name =$("#inputName2").val();
+$("#btn9").click(function() {
+	const name = $("#inputName2").val();
 	const email = $("#inputEmail2").val();
 	const score = $("#inputScore2").val();
-	const married = $("#inputMarried2").val();
+	const married = document.querySelector("#inputMarried2").checked;
 	
 	const data = {
 		name: name,
@@ -141,18 +140,12 @@ $("#btn9").click(function () {
 		score: score,
 		married: married
 	};
-	
 	$.ajax("/sub36/link2", {
-		method: "post",
+		method:"post",
 		contentType: "application/json",
 		data: JSON.stringify(data)
-	});
+	})
 });
-
-
-
-
-
 
 
 
