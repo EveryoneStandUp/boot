@@ -13,3 +13,4 @@ WHERE b.id = 4146;
 
 SELECT * FROM BoardLike;
 SELECT * FROM FileName;       
+
